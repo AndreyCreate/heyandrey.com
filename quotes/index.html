@@ -97,6 +97,22 @@ a:focus-visible{outline:3px solid var(--blue-deep);outline-offset:4px}.skip{posi
 .author-grid{grid-template-columns:280px minmax(0,1fr);align-items:start;gap:48px}.author-grid .portrait{width:280px;height:280px;aspect-ratio:1;object-position:center 30%;transform:none;border-radius:24px}.prs{display:block}.pr{min-height:540px;margin-top:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-content:center}.pr .pr-no,.pr h3{grid-column:1/-1}.pr .pr-no{font-size:16px}.pr h3{font-size:clamp(30px,3.2vw,44px);margin:12px 0 28px;max-width:820px}.pr>p:not(.pr-no):not(.how){grid-column:1;font-size:18px}.pr .how{grid-column:2;grid-row:3/5;background:var(--blue-soft);border:0;border-radius:18px;padding:24px;margin:0!important;align-self:start;font-size:18px}.pr .how-k{background:var(--blue);font-size:13px}.pr .example{border-left:3px solid var(--blue-deep);padding-left:18px;color:var(--ink-2)}.pr h3{color:#164f87}.pr:nth-child(even){background:var(--gray)}@media(max-width:700px){.author-grid{grid-template-columns:1fr;gap:28px}.author-grid .portrait{width:220px;height:220px;margin:0}.pr{display:flex;min-height:0;padding:28px 22px;gap:0;margin-top:24px}.pr h3{font-size:30px}.pr>p:not(.pr-no):not(.how),.pr .how{font-size:17px}.pr .how{padding:20px;margin-top:8px!important}.pr .how-k{font-size:11px}}
 .pr{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 220px;gap:0 30px}.pr .pr-no,.pr h3{grid-column:1/3}.pr .rule-example{grid-column:3;grid-row:1/5;align-self:center;margin:0}.rule-example img{width:100%;height:auto;border-radius:14px;box-shadow:0 10px 24px #11111112}.rule-example figcaption{font-size:12px}.pr .how{grid-column:2}.rule-example a{text-underline-offset:3px}@media(max-width:1000px){.pr{grid-template-columns:minmax(0,1fr) 200px}.pr .pr-no,.pr h3{grid-column:1}.pr .how{grid-column:1;grid-row:auto}.pr .rule-example{grid-column:2;grid-row:1/6}}@media(max-width:700px){.pr{display:flex}.pr .rule-example{width:100%;max-width:240px;margin:24px auto 0}.pr .how{margin-top:8px!important}}
 @media(min-width:1001px){.pr .how{align-self:stretch}.pr .rule-example{display:contents}.pr .rule-example>a{grid-column:3;grid-row:3/5;position:relative;display:block;min-height:0;background:#111;border-radius:14px;overflow:hidden}.pr .rule-example img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;box-shadow:none}.pr .rule-example figcaption{grid-column:3;grid-row:5;margin-top:12px}}
+.posts{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 22px;margin-top:40px;max-width:1000px}
+.post{text-decoration:none;display:flex;flex-direction:column;min-width:0}
+.post .ph{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#ddd;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .15s}
+.post:hover .ph{transform:translateY(-3px)}
+.post .ph img{width:100%;height:100%;object-fit:cover}
+.post .rk{position:absolute;left:8px;top:8px;background:#fff;border-radius:999px;padding:3px 9px;font-size:11.5px}
+.post .nm{margin-top:12px;font-weight:500;font-size:16px;line-height:1.25;letter-spacing:-.01em}
+.post .dt{color:var(--mute);margin-top:3px;font-size:11.5px}
+.post .fl{display:flex;align-items:baseline;gap:6px;margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.post .fl b{font-size:30px;font-weight:500;letter-spacing:-.045em;line-height:1;color:var(--ink)}
+.post .fl i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mute)}
+.post .st{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
+.post .st span{display:flex;flex-direction:column;min-width:0}
+.post .st b{font-weight:500;font-size:14.5px;letter-spacing:-.02em;white-space:nowrap}
+.post .st i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--mute)}
+#results .posts{max-width:none}#results .gallery-bridge{font-size:clamp(20px,2.2vw,28px);line-height:1.4;max-width:860px;margin-top:48px}#results .post:focus-visible{outline:3px solid var(--blue-deep);outline-offset:5px}@media(max-width:900px){#results .posts{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:600px){#results .posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}#results .post .fl{flex-wrap:wrap}#results .post .fl b{font-size:28px}#results .post .st b{font-size:14px}#results .post .nm{font-size:15px}}
 </style></head><body>
 <a class="skip" href="#main">К содержанию</a>
 <div class="wrap"><nav class="nav" aria-label="Навигация"><a class="nav-l" href="#author"><img src="assets/andrey.jpg" width="44" height="44" alt="Андрей Андреев"><span class="tag mono">Посты, которые залетают<br>Андрей Андреев</span></a></nav></div>
@@ -117,6 +133,135 @@ a:focus-visible{outline:3px solid var(--blue-deep);outline-offset:4px}.skip{posi
 <figure class="evidence-card"><figcaption><span class="mono">02 · динамика просмотров</span><h3>Как росли просмотры в сентябре</h3></figcaption><a href="assets/blog-statistics.jpg" target="_blank" rel="noopener" aria-label="Открыть исходный скриншот динамики"><img src="assets/september-chart-crop.jpg" width="561" height="290" alt="График просмотров с 1 по 30 сентября" loading="lazy"></a></figure></div>
 <p class="caption">На скриншоте — 2,9 тыс. новых подписчиков, в тексте число округлено до 3 тысяч. Нажмите на изображение, чтобы открыть исходный скриншот.</p>
 </div></div></section>
+<section class="sec gray" id="results">
+<div class="wrap">
+<p class="kick mono"><span class="star">✳</span> 17 постов · по подпискам</p>
+<h2>17 постов с цитатами — и результат каждого</h2>
+<div class="intro"><p>Посты с цитатами — рубрика, с которой я экспериментировал в своём блоге. Здесь все 17 каруселей и их статистика: сколько подписчиков, охвата и репостов принёс каждый пост. Расположил их по количеству подписок — от самого сильного результата к самому скромному. Нажмите на обложку, чтобы открыть оригинальный пост в Instagram.</p></div>
+<div class="posts" id="posts">
+<a class="post top" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DZSDXYdjC-z/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Фил Стац" height="675" loading="lazy" src="assets/DZSDXYdjC-z.jpg" width="540"/><span class="rk mono">01</span></span>
+<span class="nm">Фил Стац</span>
+<span class="dt mono">7 июня</span>
+<span class="fl"><b>+189</b><i>подписок</i></span>
+<span class="st"><span><b>82 619</b><i>охват</i></span><span><b>1 791</b><i>репосты</i></span></span>
+</a>
+<a class="post top" data-goal="quotes_ig_post" href="https://www.instagram.com/p/Dc5RMknEQLP/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Рейчел Каск" height="675" loading="lazy" src="assets/Dc5RMknEQLP.jpg" width="540"/><span class="rk mono">02</span></span>
+<span class="nm">Рейчел Каск</span>
+<span class="dt mono">5 сентября</span>
+<span class="fl"><b>+146</b><i>подписок</i></span>
+<span class="st"><span><b>153 425</b><i>охват</i></span><span><b>1 408</b><i>репосты</i></span></span>
+</a>
+<a class="post top" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcdrF_cjIKu/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Терренс Рил" height="675" loading="lazy" src="assets/DcdrF_cjIKu.jpg" width="540"/><span class="rk mono">03</span></span>
+<span class="nm">Терренс Рил</span>
+<span class="dt mono">25 августа</span>
+<span class="fl"><b>+132</b><i>подписки</i></span>
+<span class="st"><span><b>102 404</b><i>охват</i></span><span><b>1 346</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcWTfCbDIyz/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Джеймс Холлис" height="675" loading="lazy" src="assets/DcWTfCbDIyz.jpg" width="540"/><span class="rk mono">04</span></span>
+<span class="nm">Джеймс Холлис</span>
+<span class="dt mono">22 августа</span>
+<span class="fl"><b>+120</b><i>подписок</i></span>
+<span class="st"><span><b>58 800</b><i>охват</i></span><span><b>1 384</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcSocuVjOJQ/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Дэвид Уайт" height="675" loading="lazy" src="assets/DcSocuVjOJQ.jpg" width="540"/><span class="rk mono">05</span></span>
+<span class="nm">Дэвид Уайт</span>
+<span class="dt mono">21 августа</span>
+<span class="fl"><b>+43</b><i>подписки</i></span>
+<span class="st"><span><b>27 001</b><i>охват</i></span><span><b>615</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcejSqykQiN/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Эндрю Соломон" height="675" loading="lazy" src="assets/DcejSqykQiN.jpg" width="540"/><span class="rk mono">06</span></span>
+<span class="nm">Эндрю Соломон</span>
+<span class="dt mono">25 августа</span>
+<span class="fl"><b>+36</b><i>подписок</i></span>
+<span class="st"><span><b>30 505</b><i>охват</i></span><span><b>373</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcgtasqDESx/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Дэвид Ричо" height="675" loading="lazy" src="assets/DcgtasqDESx.jpg" width="540"/><span class="rk mono">07</span></span>
+<span class="nm">Дэвид Ричо</span>
+<span class="dt mono">26 августа</span>
+<span class="fl"><b>+27</b><i>подписок</i></span>
+<span class="st"><span><b>15 453</b><i>охват</i></span><span><b>223</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DcnbKZXDFau/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Стивен Гросс" height="675" loading="lazy" src="assets/DcnbKZXDFau.jpg" width="540"/><span class="rk mono">08</span></span>
+<span class="nm">Стивен Гросс</span>
+<span class="dt mono">29 августа</span>
+<span class="fl"><b>+22</b><i>подписки</i></span>
+<span class="st"><span><b>23 734</b><i>охват</i></span><span><b>209</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/Dd54gRQkZVA/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Сьюзан Фалуди" height="675" loading="lazy" src="assets/Dd54gRQkZVA.jpg" width="540"/><span class="rk mono">09</span></span>
+<span class="nm">Сьюзан Фалуди</span>
+<span class="dt mono">30 сентября</span>
+<span class="fl"><b>+21</b><i>подписка</i></span>
+<span class="st"><span><b>52 225</b><i>охват</i></span><span><b>237</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DdYRr7cEU1z/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: белл хукс" height="675" loading="lazy" src="assets/DdYRr7cEU1z.jpg" width="540"/><span class="rk mono">10</span></span>
+<span class="nm">белл хукс</span>
+<span class="dt mono">17 сентября</span>
+<span class="fl"><b>+19</b><i>подписок</i></span>
+<span class="st"><span><b>19 437</b><i>охват</i></span><span><b>296</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/Dd3ESoZCMHY/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Брене Браун" height="675" loading="lazy" src="assets/Dd3ESoZCMHY.jpg" width="540"/><span class="rk mono">11</span></span>
+<span class="nm">Брене Браун</span>
+<span class="dt mono">29 сентября</span>
+<span class="fl"><b>+15</b><i>подписок</i></span>
+<span class="st"><span><b>36 086</b><i>охват</i></span><span><b>334</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/Dc_ddYxCLSr/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Дарси Локман" height="675" loading="lazy" src="assets/Dc_ddYxCLSr.jpg" width="540"/><span class="rk mono">12</span></span>
+<span class="nm">Дарси Локман</span>
+<span class="dt mono">7 сентября</span>
+<span class="fl"><b>+11</b><i>подписок</i></span>
+<span class="st"><span><b>34 718</b><i>охват</i></span><span><b>153</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DddfMwpkXZp/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Лев и Софья Толстые" height="675" loading="lazy" src="assets/DddfMwpkXZp.jpg" width="540"/><span class="rk mono">13</span></span>
+<span class="nm">Лев и Софья Толстые</span>
+<span class="dt mono">19 сентября</span>
+<span class="fl"><b>+9</b><i>подписок</i></span>
+<span class="st"><span><b>39 805</b><i>охват</i></span><span><b>351</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DclGNJuDNHm/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Макс Дикинс" height="675" loading="lazy" src="assets/DclGNJuDNHm.jpg" width="540"/><span class="rk mono">14</span></span>
+<span class="nm">Макс Дикинс</span>
+<span class="dt mono">28 августа</span>
+<span class="fl"><b>+7</b><i>подписок</i></span>
+<span class="st"><span><b>39 909</b><i>охват</i></span><span><b>364</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DdD4KzdEfhU/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Зигмунд Фрейд" height="675" loading="lazy" src="assets/DdD4KzdEfhU.jpg" width="540"/><span class="rk mono">15</span></span>
+<span class="nm">Зигмунд Фрейд</span>
+<span class="dt mono">9 сентября</span>
+<span class="fl"><b>+5</b><i>подписок</i></span>
+<span class="st"><span><b>9 308</b><i>охват</i></span><span><b>88</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/DctLWjMDL2A/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Маргарет Резерфорд" height="675" loading="lazy" src="assets/DctLWjMDL2A.jpg" width="540"/><span class="rk mono">16</span></span>
+<span class="nm">Маргарет Резерфорд</span>
+<span class="dt mono">31 августа</span>
+<span class="fl"><b>+1</b><i>подписка</i></span>
+<span class="st"><span><b>8 698</b><i>охват</i></span><span><b>44</b><i>репосты</i></span></span>
+</a>
+<a class="post" data-goal="quotes_ig_post" href="https://www.instagram.com/p/Ddmj-50EbnU/" rel="noopener" target="_blank">
+<span class="ph"><img alt="Обложка карусели: Классики из школьной программы" height="675" loading="lazy" src="assets/Ddmj-50EbnU.jpg" width="540"/><span class="rk mono">17</span></span>
+<span class="nm">Классики из школьной программы</span>
+<span class="dt mono">22 сентября</span>
+<span class="fl"><b>0</b><i>подписок</i></span>
+<span class="st"><span><b>2 946</b><i>охват</i></span><span><b>7</b><i>репосты</i></span></span>
+</a>
+</div>
+
+<p class="gallery-bridge">Дальше разберём, почему эти посты распространялись, какие четыре правила сработали и как адаптировать их к вашему блогу.</p></div>
+</section>
 <section class="sec" id="principles" aria-labelledby="rules-title"><div class="wrap"><p class="kick mono"><span class="star" aria-hidden="true">✳</span> Практика · для своего блога</p><h2 id="rules-title">4 правила <span class="u">вирального поста</span> с цитатами</h2>
 <div class="intro"><p>Разбираем с примерами как адаптировать</p></div><div class="prs">
 <article class="pr" id="rule-1"><p class="mono pr-no">01 · автор</p><h3>Выбираем автора с позицией</h3><p>Когда у автора есть взгляд, с которым хочется согласиться или поспорить, у читателя появляется повод включиться в разговор. Известного имени самого по себе мало: нам нужна связь с вопросами нашей аудитории.</p><p class="example">В подборке — Рейчел Каск и её взгляд на материнство.</p><p class="how"><span class="mono how-k">Как применить у себя</span>Берём один частый вопрос из комментариев и просим AI предложить авторов с разными взглядами на него. Выбираем близкую нам позицию и проверяем её по книге или интервью. Вместе с именем сохраняем ссылку на источник.</p><figure class="rule-example"><a href="https://www.instagram.com/p/Dc5RMknEQLP/" target="_blank" rel="noopener"><img src="assets/Dc5RMknEQLP.jpg" alt="Пример поста: Рейчел Каск" loading="lazy" width="540" height="675"></a><figcaption>Рейчел Каск · <a href="https://www.instagram.com/p/Dc5RMknEQLP/" target="_blank" rel="noopener">Посмотреть пост в Instagram</a></figcaption></figure></article>
